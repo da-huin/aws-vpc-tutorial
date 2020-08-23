@@ -208,3 +208,35 @@ An elastic network interface (referred to as a *network interface* in this doc
 **What is Internet Gateway?**
 
 ![./static/internet-gateway-overview-diagram.png](./static/internet-gateway-overview-diagram.png)
+
+
+**VPC, Availability Zone**
+
+![./static/Untitled2-2.png](./static/Untitled2-2.png)
+
+**CIDR Table**
+
+| CIDR        | First IP | Last IP      |
+|-------------|----------|--------------|
+| 10.0.0.0/24 | 10.0.0.0 | 10.0.0.255   |
+| 10.0.0.0/20 | 10.0.0.0 | 10.0.15.255  |
+| 10.0.0.0/16 | 10.0.0.0 | 10.0.255.255 |
+|     ---     |          |              |
+| 10.0.1.0/24 | 10.0.1.0 | 10.0.1.255   |
+| 10.0.1.0/20 | 10.0.1.0 | 10.0.15.255  |
+| 10.0.1.0/16 | 10.0.1.0 | 10.0.255.255 |
+
+**Subnet and VPC**
+
+![./static/Untitled2-1.png](./static/Untitled2-1.png)
+
+**Subnet Size Limit**
+
+    /16 netmask (65, 536) ~ /28 netmask (16)
+
+**Subnet Routing**
+
+- Routing tables must be specified for outbound traffic to the outside.
+- Routing tables
+    - Subnet → Routing Table → Internet Gateway.
+    - Internet Gateway → Routing Table → Subnet.
